@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-01-31 Tue 11:10 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Can Computers Think?</title>
+<meta name="author" content="Niklas" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="res/tufte.css" /><link rel="icon" type="image/x-icon" href="/res/favicon.ico">
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Can Computers Think?</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgdcd39f9">The Chinese Room Argument</a></li>
+<li><a href="#orgf3f1c7d">A Quest for Meaning</a></li>
+<li><a href="#orga527945">Conclusions</a></li>
+<li><a href="#orgbf53013">References</a></li>
+</ul>
+</div>
+</div>
+<p>
+Human intelligence has been the defining property of the human race for thousands of years. However, with the recent rise of machine learning, amplified by breakthrough results in deep learning, this opinion is cast in questionable light, as the opposing question starts to become more relevant and polarizing than ever before:
+Will computers be able to think in a way that is equivalent &#x2013; or even superior &#x2013; to ours?
+</p>
+
+<p>
+The meaning of the word <i>to think</i> is rather ambiguous in this context.
+Thus, it&rsquo;s reasonable to rephrase the question at hand in order to avoid confusion over definitions.
+The hypothesis in question, namely whether computers can think in a way that can be considered equivalent to the way humans do, is strongly related to the Strong AI position. Strong AI &#x2013; broadly speaking &#x2013; describes the view that computers or computer programs are, in principle, able to understand the data they&rsquo;re working with (for a more detailed description, refer to <a href="#Xlee2020ai">1</a>).
+Weak AI, in contrast, describes the view that machines will always merely simulate the signs of intelligence, without producing any inherent understanding by themselves.
+</p>
+
+<p>
+By way of example, a human doesn&rsquo;t have to understand anything about chess in order to play a famous opening they studied beforehand.
+Compared with this, in order to come up with sophisticated moves themselves, an understanding of chess is in general assumed to be required, at least for humans.
+Because of given limits regarding the length of this essay, I will hereinafter constrain myself to the debate of syntax and semantics, as well as a closely related discussion of meaning.¹
+</p>
+
+<div id="outline-container-orgdcd39f9" class="outline-2">
+<h2 id="orgdcd39f9">The Chinese Room Argument</h2>
+<div class="outline-text-2" id="text-orgdcd39f9">
+<p>
+John Searle, one of the most popular critics of Strong AI, draws heavily upon the difference between syntax and semantics.
+His most popular argument, the Chinese Room argument (compare <a href="#Xsearle1983can">2</a>), exemplifies this well:
+It&rsquo;s a thought experiment that &#x2013; in short &#x2013; considers a non-Chinese speaking person that is locked inside a room.
+This person is given multiple batches of Chinese writing, resembling knowledge and questions, as well as instructions in English (that they do understand).
+Following these instructions, they output Chinese symbols, as determined only by the instructions and the given Chinese batches.
+However, these given batches are not understood at all by the person, but can only be matched against other Chinese symbols purely by their shape and then manipulated according to the English instructions.
+Nonetheless, if the instructions and batches of Chinese writing are sophisticated and comprehensive enough, from outside it will seem as if there was an actual Chinese speaking person inside the room.
+In this thought experiment, the person resembles the workings of a computer, with the English instructions resembling a computer program that describes how to manipulate data, i.e. the Chinese batches of text.
+</p>
+
+<p>
+Several implications have been drawn from this or similar thought experiments.
+For example, Searle&rsquo;s own interpretation is that a computer, i.e. the person locked inside the room, can never really understand Chinese, but only simulate this understanding.
+It could manipulate symbols by following given instructions and maybe do so in a way that would seem like real understanding to outsiders, but it wouldn&rsquo;t derive any meaning from manipulating the symbols.
+However, Searle seems to mix up the analogy here, as the person in the room only resembles the CPU of a computer, which in turn has never been claimed to understand the data it is working on.
+Instead, the whole room would have to be considered, and for this, it&rsquo;s not as easy to deny understanding.
+Alan Turing also took the opposing side when he originally proposed his famous Turing test, attributing the ability to think to a machine that would eventually pass the Turing test (see <a href="#Xturing2009computing">3</a> and <a href="#Xsep-turing-test">4</a>).
+</p>
+
+<p>
+According to Searle, computers will always and inherently miss a connection to the real world, which he claims to be mandatory for real apprehension.
+Only manipulating syntax would not suffice for capturing semantics.
+However, this statement begs the question how such a connection would have to look like.
+Searle claims that human thoughts &ldquo;<i>concern states of affairs in the world</i>&rdquo; (<a href="#Xsearle1983can">2</a>), without losing a word about the modality of this concernment.
+He doesn&rsquo;t make clear in what way human thought is any different from the thought-like process depicted in his Chinese room argument.
+For example, when a human thinks about a subsistent apple, it is assumed that there&rsquo;s a mapping from reality to representation in the human mind, taking place via sensory input.
+Searle doesn&rsquo;t explain what makes this mapping qualitatively different from any other mapping that might exist even in the Chinese room scenario.
+In a way, our minds are all locked up in their rooms, separated from reality and just acting on information that&rsquo;s coming through, in form of little snippets of sensory information.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf3f1c7d" class="outline-2">
+<h2 id="orgf3f1c7d">A Quest for Meaning</h2>
+<div class="outline-text-2" id="text-orgf3f1c7d">
+<p>
+Hence, Searle expresses the opinion that without some unspecified connection to its object, a thought can only remain pure syntax and doesn&rsquo;t have any semantics, i.e. meaning, attached to it.
+</p>
+
+<p>
+Marvin Minsky approaches this question in <a href="#Xminsky1982people">5</a>.
+He interprets human understanding as the formation of statistical networks in the brain and interpretation as the linking of one kind of information to another.
+This also makes sense from a biological perspective, which is in turn replicated in connectionist models; see <a href="#Xmcculloch1943logical">6</a> and <a href="#Xrosenblatt65perceptron">7</a>.
+Although this is oftentimes implicitly assumed to be the case by society in general, there&rsquo;s no such thing as one true meaning that&rsquo;s inherent to reality.
+Minsky also recognizes this, when he mentions that &ldquo;<i>our culture tries to teach us that a meaning really ought to have only a single, central sense. But if you programmed a machine that way, then, of course it couldn’t really understand. Nor would a person either, since when something has just one meaning then it doesn’t really &rsquo;mean&rsquo; at all.</i>&rdquo;
+His remarks also offer direct opposition to Searle&rsquo;s idea that thoughts require to have some kind of special connection to reality in order to really mean something.
+Minsky states that even &ldquo;<i>in the human condition, our mental contact with the real world is really quite remote. The reason we don’t notice this, and why it isn’t even much of a practical problem, is that the sensory and motor mechanisms of the brain [&#x2026;] ensure enough developmental correspondence between the objects we perceive and those that lie out there in raw reality;</i>&rdquo;
+</p>
+
+<p>
+There&rsquo;s another argument Searle makes and it&rsquo;s that &ldquo;<i>brains are biological engines; their biology matters.</i>&rdquo;
+According to him, &ldquo;<i>it is not, as several people in artificial intelligence have claimed, just an irrelevant fact about the mind that it happens to be realized in human brains.</i>&rdquo;
+This assertion, however, raises the question of what exactly would be the substantial differences that distinguish the human mind from any other machine, especially the universal machine that is the digital computer.
+What can the brain do that computers can&rsquo;t? &#x2013; On a lower level than <span class="underline">think</span>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga527945" class="outline-2">
+<h2 id="orga527945">Conclusions</h2>
+<div class="outline-text-2" id="text-orga527945">
+<p>
+There have certainly been groundbreaking advances in machine learning recently, e.g. GPT3 is quickly approaching the Turing test boundary (see <a href="#Xelkins2020can">8</a> and <a href="#Xbrown2020language">9</a>).
+Still, a lot of questions in the fields of cognitive neuroscience and machine learning, concerning both the exact workings of the human brain and the full capabilities of AI, are unanswered to date and leave room for speculations.
+</p>
+
+<p>
+Two of the debates most prominent voices, Searle and Minsky, offer various arguments and examples for their respective sides.
+I personally believe that Searle is lacking some clarification for his very restrictive opinions.
+After all, &#x2013; freely adapted from Laplace &#x2013; extraordinary claims require extraordinary evidence.
+I thus side with Minsky&rsquo;s perspective and come to the conclusion that the relevant differences between a human brain and an adequately programmed computer are less significant than is generally assumed.
+This in turn has exciting implications on possible future developments in the field of machine learning, especially when comparing the trial-and-error principle of evolution that brought forth human intelligence over the last hundreds of thousands of years with the principle of intelligent design that fabricates new computer architectures and algorithms.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+<span style="font-size: 15px">¹: Other worthwhile points to discuss might involve free will and its relation to determinism, solipsism, or whether consciousness is an illusion.</span>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf53013" class="outline-2">
+<h2 id="orgbf53013">References</h2>
+<div class="outline-text-2" id="text-orgbf53013">
+<p style="font-size:15px"><span>[1]<span>&#x00A0;&#x00A0;&#x00A0;</span></span><span id="Xlee2020ai"></span>Raymond&#x00A0;ST Lee. AI Fundamentals. In <span class="cmti-10">Artificial Intelligence in Daily</span> <span class="cmti-10">Life</span>, pages 19--37. Springer, 2020.</p>
+<p style="font-size:15px"><span>[2]<span>&#x00A0;&#x00A0;&#x00A0;</span></span><span id="Xsearle1983can"></span>John  Searle.   Can  Computers  Think.   <span class="cmti-10">Searle, J. Minds, Brains, and</span> <span class="cmti-10">Science</span>, pages 28--41, 1984.</p>
+<p style="font-size:15px"><span>[3]<span>&#x00A0;&#x00A0;&#x00A0;</span></span><span id="Xturing2009computing"></span>Alan&#x00A0;M Turing. Computing Machinery and Intelligence. In <span class="cmti-10">Parsing the</span> <span class="cmti-10">turing test</span>, pages 23--65. Springer, 2009.</p>
+<p style="font-size:15px"><span>[4]<span>&#x00A0;&#x00A0;&#x00A0;</span></span><span id="Xsep-turing-test"></span>Graham Oppy and David Dowe. The Turing Test. In Edward&#x00A0;N. Zalta, editor,  <span class="cmti-10">The Stanford Encyclopedia of Philosophy</span>.  Metaphysics  Research Lab, Stanford University, winter 2020 edition, 2020.</p>
+<p style="font-size:15px"><span>[5]<span>&#x00A0;&#x00A0;&#x00A0;</span></span><span id="Xminsky1982people"></span>Marvin&#x00A0;L Minsky.  Why People Think Computers Can't.  <span class="cmti-10">AI Magazine</span>, 3(4):3--3, 1982.</p>
+<p style="font-size:15px"><span>[6]<span>&#x00A0;&#x00A0;&#x00A0;</span></span><span id="Xmcculloch1943logical"></span>Warren&#x00A0;S McCulloch and Walter Pitts. A Logical Calculus of the Ideas Immanent in Nervous Activity.   <span class="cmti-10">The Bulletin of Mathematical Biophysics</span>, 5(4):115--133, 1943.</p>
+<p style="font-size:15px"><span>[7]<span>&#x00A0;&#x00A0;&#x00A0;</span></span><span id="Xrosenblatt65perceptron"></span>F&#x00A0;Rosenblatt.  The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain. <span class="cmti-10">Psychological Review</span>, 65(6):19S8.</p>
+<p style="font-size:15px"><span>[8]<span>&#x00A0;&#x00A0;&#x00A0;</span></span><span id="Xelkins2020can"></span>Katherine Elkins and Jon Chun. Can GPT-3 Pass a Writer's Turing Test.  <span class="cmti-10">Journal of Cultural Analytics</span>, 2371:4549, 2020.</p>
+<p style="font-size:15px"><span>[9]<span>&#x00A0;&#x00A0;&#x00A0;</span></span><span id="Xbrown2020language"></span>Tom&#x00A0;B Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan,  Prafulla  Dhariwal,  Arvind  Neelakantan,  Pranav  Shyam,  Girish Sastry, Amanda Askell, et&#x00A0;al. Language Models are Few-shot Learners. <span class="cmti-10">arXiv</span> <span class="cmti-10">preprint arXiv:2005.14165</span>, 2020.</p>
+<p style="font-size:15px"><span>[10]<span>&#x00A0;&#x00A0;&#x00A0;</span></span><span id="Xturing2004can"></span>Alan&#x00A0;M Turing. Can Digital Computers Think? <span class="cmti-10">The Turing Test: Verbal</span> <span class="cmti-10">Behavior as the Hallmark of Intelligence</span>, pages 111--116, 2004.</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Niklas</p>
+<p class="date">Created: 2023-01-31 Tue 11:10</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+* {font-family: "Bitstream Vera Sans Mono",courier, monospace; line-height: 1.4} 
+
+table {width: 400px; margin-bottom: 1em;}
+th {text-align: left;}
+img { float: left; margin-bottom: 10px; margin-right: 15px}
+pre {clear: both;}
+
+#title {margin: auto; width: 100%; overflow: hidden; font-size: 80%}
+#content, #postamble {margin: auto; width: 38em;}
+
+/* TODO */
+/*h2 { font-size: 1.3em; font-weight: bold; }
+h3 { font-size: 1.2em; font-weight: bold}
+h4 { font-size: 1.1em; font-weight: bold}*/
+h2:before {content: " * "}
+h3:before {content: " ** "}
+h4:before {content: " *** "}
+h5:before {content: " **** "}
+#title,pre {font-family: "Bitstream Vera Sans Mono",courier, monospace;}
+
+a { color: black; text-decoration: none; font-weight: bold}
+a:hover { color: white; background-color: black;}
+a:before { content: "["; color: black; background-color: white;}
+a:after { content: "]"; color: black; background-color: white;}
+p { text-align: justify;  /*margin-bottom: 2em; margin-top: 2em;*/}
+
+/*h1 {display:none;}*/
+
+/*ul {list-style-type:none}
+ul li:before { content: "+ "; color: black;}*/
+
+#postamble p {
+    margin: 0px;
+}
+
+.tag {
+    float: right;
+    background-color: white;
+    color: #BEBEBE;
+}
+
+.tag span:before {
+    content: ":";
+}
+
+.tag:after {
+    content: ":";
+}
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+}
+
+.HEADER {
+    margin-bottom: 48px;
+}
+.HEADER * {
+    text-align: center;
+    background-color: white;
+}
+.HEADER pre {
+    border: 0px;
+}
