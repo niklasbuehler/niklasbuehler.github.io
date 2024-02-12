@@ -192,27 +192,38 @@
   .org-svg { }
 </style>
 <link rel="stylesheet" type="text/css" href="res/style-min.css" /><link rel="icon" type="image/x-icon" href="/res/favicon.ico">
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="content" class="content">
@@ -228,10 +239,9 @@ We&rsquo;ll start by calculating Pearson correlation coefficients to hopefully g
 I&rsquo;ll also try to infer causations using inside knowledge about me and my life.
 Bear with me!
 </p>
-
-<div id="outline-container-org8136b78" class="outline-2">
-<h2 id="org8136b78">The Pearson Correlation Coefficient</h2>
-<div class="outline-text-2" id="text-org8136b78">
+<div id="outline-container-org8272957" class="outline-2">
+<h2 id="org8272957">The Pearson Correlation Coefficient</h2>
+<div class="outline-text-2" id="text-org8272957">
 <p>
 <span class="underline">Disclaimer: Correlation does not imply causation!</span>
 </p>
@@ -262,10 +272,9 @@ Its values are always between \(-1\) and \(1\), with \(-1\) indicating a perfect
 </p>
 </div>
 </div>
-
-<div id="outline-container-org2de6487" class="outline-2">
-<h2 id="org2de6487">Some Preliminary Remarks</h2>
-<div class="outline-text-2" id="text-org2de6487">
+<div id="outline-container-orgecd891f" class="outline-2">
+<h2 id="orgecd891f">Some Preliminary Remarks</h2>
+<div class="outline-text-2" id="text-orgecd891f">
 <p>
 I usually meditate in the evenings, so it&rsquo;s reasonable to measure the effects of meditation on stress level etc. of the next day.
 Thus, I shifted these datasets by one day in the corresponding direction.
@@ -292,29 +301,26 @@ Furthermore, I&rsquo;ve rounded results to two decimal places for this presentat
 </p>
 </div>
 </div>
-
-<div id="outline-container-org199a1fa" class="outline-2">
-<h2 id="org199a1fa">Significant Correlations</h2>
-<div class="outline-text-2" id="text-org199a1fa">
+<div id="outline-container-orgedd893e" class="outline-2">
+<h2 id="orgedd893e">Significant Correlations</h2>
+<div class="outline-text-2" id="text-orgedd893e">
 <p>
 My target metrics for this data collection were happiness, fitness, productivity and stress level (all as perceived by me).
 I&rsquo;ve listed the significant correlations below and discuss them further down.
 </p>
 </div>
-
-<div id="outline-container-org4535ca4" class="outline-3">
-<h3 id="org4535ca4">Happiness</h3>
-<div class="outline-text-3" id="text-org4535ca4">
+<div id="outline-container-orgdf792a3" class="outline-3">
+<h3 id="orgdf792a3">Happiness</h3>
+<div class="outline-text-3" id="text-orgdf792a3">
 <ul class="org-ul">
 <li>Fitness: 0.44</li>
 <li>Weather: 0.34</li>
 </ul>
 </div>
 </div>
-
-<div id="outline-container-org9878c0b" class="outline-3">
-<h3 id="org9878c0b">Fitness</h3>
-<div class="outline-text-3" id="text-org9878c0b">
+<div id="outline-container-orga38daf5" class="outline-3">
+<h3 id="orga38daf5">Fitness</h3>
+<div class="outline-text-3" id="text-orga38daf5">
 <ul class="org-ul">
 <li>Happiness: 0.44 (by symmetry)</li>
 <li>Time with friends &amp; family: <b><b>-0.69</b></b></li>
@@ -333,20 +339,18 @@ I&rsquo;ve listed the significant correlations below and discuss them further do
 </ul>
 </div>
 </div>
-
-<div id="outline-container-orgf35b3c6" class="outline-3">
-<h3 id="orgf35b3c6">Productivity</h3>
-<div class="outline-text-3" id="text-orgf35b3c6">
+<div id="outline-container-org3925851" class="outline-3">
+<h3 id="org3925851">Productivity</h3>
+<div class="outline-text-3" id="text-org3925851">
 <ul class="org-ul">
 <li>Stretching: 0.42</li>
 <li>Hours of sleep: 0.37</li>
 </ul>
 </div>
 </div>
-
-<div id="outline-container-org1b8615c" class="outline-3">
-<h3 id="org1b8615c">Stress levels</h3>
-<div class="outline-text-3" id="text-org1b8615c">
+<div id="outline-container-orge6875dd" class="outline-3">
+<h3 id="orge6875dd">Stress levels</h3>
+<div class="outline-text-3" id="text-orge6875dd">
 <ul class="org-ul">
 <li>None</li>
 <li>Highest was Meditation with -0.29</li>
@@ -354,10 +358,9 @@ I&rsquo;ve listed the significant correlations below and discuss them further do
 </div>
 </div>
 </div>
-
-<div id="outline-container-orgdd9f4f8" class="outline-2">
-<h2 id="orgdd9f4f8">Discussion &amp; Speculations</h2>
-<div class="outline-text-2" id="text-orgdd9f4f8">
+<div id="outline-container-orgbc5dadc" class="outline-2">
+<h2 id="orgbc5dadc">Discussion &amp; Speculations</h2>
+<div class="outline-text-2" id="text-orgbc5dadc">
 <p>
 My perceived fitness and happiness are correlated.
 As training days are chosen in advance &#x2013; thus independently from how I feel on a certain day &#x2013;, I guess it&rsquo;s reasonable to assume a slight causal influence from fitness to happiness.
@@ -422,10 +425,9 @@ I hope more data and/or better quantitative measurements will grant more insight
 </p>
 </div>
 </div>
-
-<div id="outline-container-org9b579a2" class="outline-2">
-<h2 id="org9b579a2">Possible Improvements</h2>
-<div class="outline-text-2" id="text-org9b579a2">
+<div id="outline-container-org8caef15" class="outline-2">
+<h2 id="org8caef15">Possible Improvements</h2>
+<div class="outline-text-2" id="text-org8caef15">
 <p>
 There are several ways I can improve my interpretations and techniques.
 One is to simply collect <span class="underline">more</span> data.
