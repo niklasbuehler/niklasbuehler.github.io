@@ -3,6 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
+<!-- 2024-02-19 Mon 14:52 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Niklas Bühler</title>
@@ -191,7 +192,7 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
-<link rel="stylesheet" type="text/css" href="res/style-min.css" /><link rel="icon" type="image/x-icon" href="/res/favicon.ico">
+<link rel="stylesheet" href="res/pico.min.css" /><link rel="stylesheet" href="res/style.css" /><link rel="icon" type="image/x-icon" href="/res/favicon.ico">
 </head>
 <body>
 <div id="content" class="content">
@@ -199,42 +200,367 @@
 <br />
 <span class="subtitle">Escaping local optima on a random walk through life.</span>
 </h1>
-<div class="HEADER" id="orgbe3531e">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org5b9a9cc">🎓 Academic Publications</a>
+<ul>
+<li><a href="#orgd8758cb">🧬 Functional Gene Embeddings</a></li>
+<li><a href="#org5d0ed13">🧠 Connectome Informed Attention</a></li>
+<li><a href="#org9241df8">🧊 Bayesian Deep Learning &#x2013; A Stochastic Dynamics Perspective</a></li>
+<li><a href="#org6f2a9fa">🧬 Interpretable Mechanistic Models for Predicting Tissue-specific RBP Expression</a></li>
+<li><a href="#org12a631d">🌆 Case Study &#x2013; Life Expectancy in Barcelona</a></li>
+<li><a href="#orgab69248">🧮 Formalism 101</a></li>
+<li><a href="#org188cf68">🗣️ Crosslingual, Language-independent Phoneme Alignment</a></li>
+<li><a href="#org6993450">🤖 Can Computers Think?</a></li>
+<li><a href="#org332c77b">🔏 Security Review</a></li>
+<li><a href="#orgf5ab692">🍛 Cooking With Curry: Lambda Poetry</a></li>
+<li><a href="#orgc7178d7">🌐 Graph Theory Review</a></li>
+<li><a href="#orgdd19443">♾️ Mächtigkeiten, Kardinalzahlen und die Kontinuumshypothese</a></li>
+<li><a href="#org58f591c">🧫 Computation and Pattern Formation by Swarm Networks with Brownian Motion</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org5b9a9cc" class="outline-2">
+<h2 id="org5b9a9cc">🎓 Academic Publications</h2>
+<div class="outline-text-2" id="text-org5b9a9cc">
+</div>
+<div id="outline-container-orgd8758cb" class="outline-3">
+<h3 id="orgd8758cb">🧬 Functional Gene Embeddings</h3>
+<div class="outline-text-3" id="text-orgd8758cb">
 <p>
-<a href="./publications.html">~/Documents</a> &#x2013; <a href="https://www.github.com/niklasbuehler">~/repos</a> &#x2013; <a href="https://www.linkedin.com/in/niklas-buehler">~/cv</a> &#x2013; <a href="https://www.goodreads.com/algoholix">~/Library</a> &#x2013; <a href="mailto:hi@niklasbuehler.com">Contact</a>
+<span class="timestamp-wrapper"><span class="timestamp">[2024-02-08 Thu]</span></span>
 </p>
 
+
+<div id="org6c4a77d" class="figure">
+<p><img src="./res/img/functional-gene-embedding.png" alt="functional-gene-embedding.png" />
+</p>
 </div>
-<div id="outline-container-orgf2ca29c" class="outline-2">
-<h2 id="orgf2ca29c">Posts</h2>
-<div class="outline-text-2" id="text-orgf2ca29c">
+
+<p>
+Functional gene embeddings, numerical vectors capturing gene functions, can provide useful representations of genes for downstream analyses. In this project, we
+extracted functional gene embeddings from transcription data and other genomewide measurements by using principle components, autoencoders and a Variational
+Deep Tensor Factorization model. We used these embeddings, as well as embeddings from other publications, as gene features in the prediction of genome-wide
+association study summary statistics for a diverse set of traits and compared their
+performances.
+</p>
+
 <ul class="org-ul">
-<li><span class="timestamp-wrapper"><span class="timestamp">[2022-01-04 Tue] </span></span> <a href="./formalism.html">Formalism 101</a></li>
-<li><span class="timestamp-wrapper"><span class="timestamp">[2021-08-04 Wed] </span></span> <a href="./can-computers-think.html">Can Computers Think?</a></li>
-<li><span class="timestamp-wrapper"><span class="timestamp">[2021-04-17 Sat] </span></span> <a href="./hacking-life-2.html">Hacking Life pt. 2: First Evaluations</a></li>
-<li><span class="timestamp-wrapper"><span class="timestamp">[2021-03-24 Wed] </span></span> <a href="./hacking-life.html">Hacking Life pt. 1: Data Diary</a></li>
+<li><a href="./res/pub/functional-gene-embeddings.pdf">Report</a></li>
+<li><a href="./res/pub/functional-gene-embeddings-slides.pdf">Slides</a></li>
+</ul>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-org5d0ed13" class="outline-3">
+<h3 id="org5d0ed13">🧠 Connectome Informed Attention</h3>
+<div class="outline-text-3" id="text-org5d0ed13">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2023-02-16 Thu]</span></span>
+</p>
+
+
+<div id="org63eb0f9" class="figure">
+<p><img src="./res/img/connectome-informed-attention.png" alt="connectome-informed-attention.png" />
+</p>
+</div>
+
+<p>
+We predict tau spreading behavior for Altzheimer&rsquo;s patients, based on a connectivity map and tau PET scans of the brain.
+</p>
+
+<ul class="org-ul">
+<li><a href="./res/pub/adlm/presentation-1.pdf">Initial Presentation</a></li>
+<li><a href="./res/pub/adlm/presentation-2.pdf">Second Presentation</a></li>
+<li><a href="./res/pub/adlm/presentation-3.pdf">Third Presentation</a></li>
+<li><a href="./res/pub/adlm/presentation-4.pdf">Fourth Presentation</a></li>
+<li><a href="./res/pub/adlm/presentation-5.pdf">Fifth Presentation</a></li>
+<li><a href="./res/pub/adlm/presentation-6.pdf">Sixth Presentation</a></li>
+<li><a href="./res/pub/adlm/poster.pdf">Final Poster</a></li>
+<li><a href="https://github.com/niklasbuehler/connectome-informed-attention">Github Repository</a></li>
+</ul>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-org9241df8" class="outline-3">
+<h3 id="org9241df8">🧊 Bayesian Deep Learning &#x2013; A Stochastic Dynamics Perspective</h3>
+<div class="outline-text-3" id="text-org9241df8">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2023-01-29 Sun]</span></span>
+</p>
+
+
+<div id="orgfb0a65a" class="figure">
+<p><img src="./res/img/bayesian-deep-learning.png" alt="bayesian-deep-learning.png" />
+</p>
+</div>
+
+<p>
+This report gives an overview of Bayesian deep learning from a stochastic dynamics perspective by first introducing Bayesian deep learning as well as two important methods for training Bayesian neural networks, and then building upon this fundament by presenting various approaches and variations inspired by stochastic dynamics.
+</p>
+
+<ul class="org-ul">
+<li><a href="./res/pub/bdl_report.pdf">Report</a></li>
+<li><a href="./res/pub/bdl_presentation.pdf">Presentation</a></li>
+</ul>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-org6f2a9fa" class="outline-3">
+<h3 id="org6f2a9fa">🧬 Interpretable Mechanistic Models for Predicting Tissue-specific RBP Expression</h3>
+<div class="outline-text-3" id="text-org6f2a9fa">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2022-07-25 Mon]</span></span>
+</p>
+
+
+<div id="org07543b1" class="figure">
+<p><img src="./res/img/interpretable-mechanistic-models-notes.png" alt="interpretable-mechanistic-models-notes.png" />
+</p>
+</div>
+
+<p>
+In this report, we predict expression patterns of different RNA-binding proteins across tissue types. As our results were mostly supported by the literature and experimental data, they could lead to discovery of previously unknown expression patterns of RBPs.
+</p>
+
+<ul class="org-ul">
+<li><a href="./res/pub/mechanistic-models-notes.pdf">Sketch</a></li>
+<li><a href="./res/pub/mechanistic-models.pdf">Report</a></li>
+</ul>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-org12a631d" class="outline-3">
+<h3 id="org12a631d">🌆 Case Study &#x2013; Life Expectancy in Barcelona</h3>
+<div class="outline-text-3" id="text-org12a631d">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2022-01-23 Sun]</span></span>
+</p>
+
+<p>
+A short case study on what factors might influence life expectancy in the city of Barcelona.
+</p>
+
+<ul class="org-ul">
+<li><a href="./res/pub/case-study-barcelona.pdf">Case Study</a></li>
+</ul>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-orgab69248" class="outline-3">
+<h3 id="orgab69248">🧮 Formalism 101</h3>
+<div class="outline-text-3" id="text-orgab69248">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2022-01-04 Tue]</span></span>
+</p>
+
+
+<div id="orgaf899b2" class="figure">
+<p><img src="./res/img/formalism.png" alt="formalism.png" />
+</p>
+</div>
+
+<ul class="org-ul">
+<li><a href="./formalism.html">Text</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcf42ef6" class="outline-2">
-<h2 id="orgcf42ef6">Resources</h2>
-<div class="outline-text-2" id="text-orgcf42ef6">
+<div id="outline-container-org188cf68" class="outline-3">
+<h3 id="org188cf68">🗣️ Crosslingual, Language-independent Phoneme Alignment</h3>
+<div class="outline-text-3" id="text-org188cf68">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2021-10-01 Fri]</span></span>
+</p>
+
+
+<div id="orgd7e32db" class="figure">
+<p><img src="./res/img/bachelor-thesis.png" alt="bachelor-thesis.png" />
+</p>
+</div>
+
+<p>
+The goal of this thesis is to apply cross-lingual, multilingual techniques on the task of phoneme alignment, i.e. the task of temporally aligning a phonetic transcript to its corresponding audio recording.
+Three different neural network architectures are trained on a multilingual data set and utilized as a source of emission probabilities in hybrid HMM/ANN systems. These HMM/ANN systems enable the computation of phoneme alignments via the Viterbi algorithm.
+By iterating this process, multilingual acoustic models are bootstrapped and the resulting systems are used to cross-lingually align data from a previously unseen target language.
+</p>
+
 <ul class="org-ul">
-<li><span class="timestamp-wrapper"><span class="timestamp">[2024-02-08 Thu] </span></span> <a href="./res/pub/functional-gene-embeddings.pdf">Functional Gene Embeddings</a> + <a href="./res/pub/functional-gene-embeddings-slides.pdf">Presentation</a></li>
-<li><span class="timestamp-wrapper"><span class="timestamp">[2023-04-11 Tue] </span></span> <a href="./res/pub/tmiri-essay.pdf">Ethical Controversies Concerning Large Language Models</a></li>
-<li><span class="timestamp-wrapper"><span class="timestamp">[2023-02-16 Thu] </span></span> <a href="./connectome-informed-attention.html">Connectome Informed Attention</a></li>
-<li><span class="timestamp-wrapper"><span class="timestamp">[2023-01-29 Sun] </span></span> <a href="./res/pub/bdl_report.pdf">Bayesian Deep Learning &#x2013; A Stochastic Dynamics Perspective</a> + <a href="./res/pub/bdl_presentation.pdf">Presentation</a></li>
-<li><span class="timestamp-wrapper"><span class="timestamp">[2022-07-25 Mon] </span></span> <a href="./res/pub/mechanistic-models.pdf">Interpretable Mechanistic Models for Predicting Tissue-specific RBP Expression</a></li>
-<li><span class="timestamp-wrapper"><span class="timestamp">[2022-01-23 Sun] </span></span> <a href="./res/pub/case-study-barcelona.pdf">Case Study &#x2013; Life Expectancy in Barcelona</a></li>
-<li><span class="timestamp-wrapper"><span class="timestamp">[2021-10-01 Fri] </span></span> <a href="./res/pub/thesis.pdf">Cross-lingual, Language-independent Phoneme Alignment</a> + <a href="./res/pub/thesis-slides.pdf">Presentation</a></li>
-<li><span class="timestamp-wrapper"><span class="timestamp">[2020-07-30 Thu] </span></span> <a href="./res/pub/security-review.pdf">Security Review</a></li>
-<li><span class="timestamp-wrapper"><span class="timestamp">[2020-08-03 Mon] </span></span> <a href="./res/pub/lambda-poetry.pdf">Cooking With Curry: Lambda Poetry</a></li>
-<li><span class="timestamp-wrapper"><span class="timestamp">[2020-02-20 Thu] </span></span> <a href="./res/pub/graph-theory-review.pdf">Graph Theory Review</a> + <a href="./res/pub/anki-graphtheory.apkg">Anki Deck</a></li>
-<li><span class="timestamp-wrapper"><span class="timestamp">[2019-12-17 Tue] </span></span> <a href="./res/pub/proseminar-grundlagen-mathematik.pdf">Mächtigkeiten, Kardinalzahlen und die Kontinuumshypothese</a> + <a href="./res/pub/proseminar-grundlagen-mathematik-nachtrag.pdf">Nachtrag Satz 4.9</a></li>
-<li><span class="timestamp-wrapper"><span class="timestamp">[2019-07-22 Mon] </span></span> <a href="./res/pub/swarm-networks.pdf">Zellularautomaten und diskrete komplexe Systeme</a> + <a href="./res/pub/swarm-networks-presentation.pdf">Präsentation</a></li>
+<li><a href="./res/pub/thesis.pdf">Thesis</a></li>
+<li><a href="./res/pub/thesis-slides.pdf">Slides</a></li>
+</ul>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-org6993450" class="outline-3">
+<h3 id="org6993450">🤖 Can Computers Think?</h3>
+<div class="outline-text-3" id="text-org6993450">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2021-08-04 Wed]</span></span>
+</p>
+
+
+<div id="orgec73529" class="figure">
+<p><img src="./res/img/can-computers-think.png" alt="can-computers-think.png" />
+</p>
+</div>
+
+<p>
+Human intelligence has been the defining property of the human race for
+thousands of years.
+However, with the recent rise of machine learning, amplified by breakthrough
+results in deep learning, this opinion is cast in questionable light, as the
+opposing question starts to become more relevant and polarizing than ever
+before:
+Will computers be able to think in a way that is equivalent – or even superior – to ours?
+</p>
+
+<ul class="org-ul">
+<li><a href="./can-computers-think.html">Essay</a></li>
+</ul>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-org332c77b" class="outline-3">
+<h3 id="org332c77b">🔏 Security Review</h3>
+<div class="outline-text-3" id="text-org332c77b">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-07-30 Thu]</span></span>
+</p>
+
+
+<div id="org2a1aae4" class="figure">
+<p><img src="./res/img/security.png" alt="security.png" />
+</p>
+</div>
+
+<p>
+A review of the most important definitions and results of the Security lecture given at KIT.
+</p>
+
+<ul class="org-ul">
+<li><a href="./res/pub/security-review.pdf">Review</a></li>
+</ul>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-orgf5ab692" class="outline-3">
+<h3 id="orgf5ab692">🍛 Cooking With Curry: Lambda Poetry</h3>
+<div class="outline-text-3" id="text-orgf5ab692">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-08-03 Mon]</span></span>
+</p>
+
+
+<div id="orga12e33b" class="figure">
+<p><img src="./res/img/y-combinator.png" alt="y-combinator.png" />
+</p>
+</div>
+
+<p>
+The lambda calculus is a formal system that is used to express computations.
+Like the Turing machine, it’s a universal model of computation, however it’s much simpler and more elegant than those bulky machines.
+The following pages are filled with fundamental datastructures and the most important functions operating on them, in the untyped lambda calculus.
+The datastructures presented differ from ordinary, imperative datastructures, as they are purely functional. That means they don’t describe where and how the data is stored, but rather how functions are applied to that data.
+Variable names are often chosen as a hint on the value they’re holding, but aren’t elaborated on. Their exact purpose and meaning is left open for exploration.
+</p>
+
+<ul class="org-ul">
+<li><a href="./res/pub/lambda-poetry.pdf">Document</a></li>
+</ul>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-orgc7178d7" class="outline-3">
+<h3 id="orgc7178d7">🌐 Graph Theory Review</h3>
+<div class="outline-text-3" id="text-orgc7178d7">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-02-20 Thu]</span></span>
+</p>
+
+
+<div id="org1a4701b" class="figure">
+<p><img src="./res/img/graph-theory.png" alt="graph-theory.png" />
+</p>
+</div>
+
+<p>
+A review of the most important definitions and results of the Graph Theory lecture given at KIT.
+</p>
+
+<ul class="org-ul">
+<li><a href="./res/pub/graph-theory-review.pdf">Review</a></li>
+<li><a href="./res/pub/anki-graphtheory.apkg">Anki Deck</a></li>
+</ul>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-orgdd19443" class="outline-3">
+<h3 id="orgdd19443">♾️ Mächtigkeiten, Kardinalzahlen und die Kontinuumshypothese</h3>
+<div class="outline-text-3" id="text-orgdd19443">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2019-12-17 Tue]</span></span>
+</p>
+
+
+<div id="org6071df1" class="figure">
+<p><img src="./res/img/infinity.png" alt="infinity.png" />
+</p>
+</div>
+
+<p>
+Summary of set-theoretical definitions and theorems for my presentation (which was done on blackboard).
+</p>
+
+<ul class="org-ul">
+<li><a href="./res/pub/proseminar-grundlagen-mathematik.pdf">Summary</a></li>
+<li><a href="./res/pub/proseminar-grundlagen-mathematik-nachtrag.pdf">Followup</a></li>
+</ul>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-org58f591c" class="outline-3">
+<h3 id="org58f591c">🧫 Computation and Pattern Formation by Swarm Networks with Brownian Motion</h3>
+<div class="outline-text-3" id="text-org58f591c">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2019-07-22 Mon]</span></span>
+</p>
+
+
+<div id="org70368f9" class="figure">
+<p><img src="./res/img/cells.png" alt="cells.png" />
+</p>
+</div>
+
+<p>
+Written report and presentation condensing multiple papers about the concept of Swarm Networks introduced by Isokawa and Peper.
+</p>
+
+<ul class="org-ul">
+<li><a href="./res/pub/swarm-networks.pdf">Report</a></li>
+<li><a href="./res/pub/swarm-networks-presentation.pdf">Slides</a></li>
 </ul>
 </div>
 </div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-02-19 Mon 14:52</p>
 </div>
 </body>
 </html>

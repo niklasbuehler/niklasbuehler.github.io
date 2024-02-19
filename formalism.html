@@ -3,6 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
+<!-- 2024-02-19 Mon 14:53 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Formalism 101</title>
@@ -191,7 +192,7 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
-<link rel="stylesheet" type="text/css" href="res/tufte.css" /><link rel="icon" type="image/x-icon" href="/res/favicon.ico">
+<link rel="stylesheet" href="res/pico.min.css" /><link rel="stylesheet" href="res/style.css" /><link rel="icon" type="image/x-icon" href="/res/favicon.ico">
 <script>
   window.MathJax = {
     tex: {
@@ -229,14 +230,9 @@
 <div id="content" class="content">
 <h1 class="title">Formalism 101
 <br />
-<span class="subtitle">Trying to escape local optima on a random walk through life.</span>
+<span class="subtitle">Escaping local optima on a random walk through life.</span>
 </h1>
-<div class="HEADER" id="org4a6e1fb">
-<p>
-<a href="./publications.html">~/Documents</a> &#x2013; <a href="https://www.github.com/niklasbuehler">~/repos</a> &#x2013; <a href="https://www.linkedin.com/in/niklas-buehler">~/cv</a> &#x2013; <a href="https://www.goodreads.com/algoholix">~/Library</a> &#x2013; <a href="mailto:hi@niklasbuehler.com">Contact</a>
-</p>
-
-</div>
+<hr />
 <div id="outline-container-orgfc619e5" class="outline-2">
 <h2 id="orgfc619e5">1 Formal Languages</h2>
 <div class="outline-text-2" id="text-orgfc619e5">
@@ -304,7 +300,7 @@ The elements \(w \in \Sigma^{*}\) are exactly the words over \(\Sigma\).
 <h2 id="orga194f85">2 Grammars</h2>
 <div class="outline-text-2" id="text-orga194f85">
 <p>
-<b>2.1</b> A grammar \(G = (N, \Sigma, P, S)\) is defined as follows:
+<b>2.1</b> A grammar \(G = (N, \Sigma, P, S)\) is nefined as follows:
 </p>
 
 <ul class="org-ul">
@@ -323,7 +319,7 @@ Note that \(N \cap \Sigma = \emptyset\) is required, as each symbol is either no
 
 <p>
 The binary relation \(\Rightarrow_{G} \subseteq (\Sigma \cup N)^{*} \times (\Sigma \cup N)^{*}\), called <i>\(G\) derives in one step</i>, is defined as
-\[ x \Rightarrow_{G} y \iff \exists u, v, p, q \in (\Sigma \cup N)^{*}: (x = upv) \wedge (y = uqv) \wedge p \rightarrow q \in P) \text{.} \]
+\[ x \Rightarrow_{G} y \iff \exists u, v, p, q \in (\Sigma \cup N)^{*}: (x = upv) \wedge (y = uqv) \wedge (p \rightarrow q \in P) \text{.} \]
 The binary relation \(\Rightarrow_{G}^{*}\), called <i>\(G\) derives in zero or more steps</i>, is the reflexive transitive closure of \(\Rightarrow_{G}\).
 The grammar \(G\) thus defines a formal language \(L(G) := \{ w \in \Sigma^{*} | S \Rightarrow_{G}^{*} w \text{ in finitely many steps} \}\).
 </p>
@@ -407,6 +403,9 @@ Let \(N_{\lambda} = \{S_{\lambda}, V, D, D'\}\), and let
 </p>
 </div>
 </div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-02-19 Mon 14:53</p>
 </div>
 </body>
 </html>
