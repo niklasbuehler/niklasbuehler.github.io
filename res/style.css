@@ -6,6 +6,10 @@ body {
     margin-top: 64px;
 }
 
+p {
+    text-align: justify;
+}
+
 #content {
     max-width: 40em;
 }
