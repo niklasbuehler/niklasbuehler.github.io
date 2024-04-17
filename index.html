@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-02-19 Mon 14:52 -->
+<!-- 2024-04-17 Wed 15:06 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Niklas Bühler</title>
@@ -206,6 +206,7 @@
 <ul>
 <li><a href="#org5b9a9cc">🎓 Academic Publications</a>
 <ul>
+<li><a href="#org46f5086">🩻 Pilot Study for Large-scale Radiograph Pre-training</a></li>
 <li><a href="#orgd8758cb">🧬 Functional Gene Embeddings</a></li>
 <li><a href="#org5d0ed13">🧠 Connectome Informed Attention</a></li>
 <li><a href="#org9241df8">🧊 Bayesian Deep Learning &#x2013; A Stochastic Dynamics Perspective</a></li>
@@ -229,6 +230,48 @@
 <h2 id="org5b9a9cc">🎓 Academic Publications</h2>
 <div class="outline-text-2" id="text-org5b9a9cc">
 </div>
+<div id="outline-container-org46f5086" class="outline-3">
+<h3 id="org46f5086">🩻 Pilot Study for Large-scale Radiograph Pre-training</h3>
+<div class="outline-text-3" id="text-org46f5086">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2024-04-17 Wed]</span></span>
+</p>
+
+
+<div id="org0a9929e" class="figure">
+<p><img src="./res/img/irma.png" alt="irma.png" />
+</p>
+</div>
+
+<p>
+In recent years, medical datasets have expanded significantly, offering great potential for the development of machine learning applications in the medical field.
+However, manual labeling of such data is costly and poses a significant bottleneck to their utilization.
+</p>
+
+<p>
+To address this issue, self-supervised learning (SSL) exploits the data itself to learn embeddings that can be quickly adapted to downstream tasks as needed.
+</p>
+
+<p>
+In this work, we show the suitability of self-supervised learning techniques, specifically masked autoencoders (MAE), to generate such embeddings from a large clinical dataset comprising 12,000 radiograph images from various anatomical regions.
+</p>
+
+<p>
+By pre-training a MAE model on producing these high-quality embeddings, the need for labeled data in downstream tasks is substantially reduced.
+This is evidenced by a linear classifier trained on representations from this MAE model achieving 84.58% top-1 accuracy on bodypart classification when using only 1% of data, marking a 7% relative improvement over fully supervised training.
+</p>
+
+<p>
+This pilot study thus establishes the foundation for applying the MAE strategy to our own large-scale real-world radiograph dataset, comprising 700,000 radiograph images, as well as evaluating on more complex downstream tasks in future work.
+</p>
+
+<ul class="org-ul">
+<li><a href="./res/pub/pilot-study-for-large-scale-radiograph-pre-training.pdf">Report</a></li>
+</ul>
+
+<hr />
+</div>
+</div>
 <div id="outline-container-orgd8758cb" class="outline-3">
 <h3 id="orgd8758cb">🧬 Functional Gene Embeddings</h3>
 <div class="outline-text-3" id="text-orgd8758cb">
@@ -237,7 +280,7 @@
 </p>
 
 
-<div id="org6c4a77d" class="figure">
+<div id="orgcdb4851" class="figure">
 <p><img src="./res/img/functional-gene-embedding.png" alt="functional-gene-embedding.png" />
 </p>
 </div>
@@ -266,7 +309,7 @@ performances.
 </p>
 
 
-<div id="org63eb0f9" class="figure">
+<div id="orge237c6a" class="figure">
 <p><img src="./res/img/connectome-informed-attention.png" alt="connectome-informed-attention.png" />
 </p>
 </div>
@@ -297,7 +340,7 @@ We predict tau spreading behavior for Altzheimer&rsquo;s patients, based on a co
 </p>
 
 
-<div id="orgfb0a65a" class="figure">
+<div id="org4bde17c" class="figure">
 <p><img src="./res/img/bayesian-deep-learning.png" alt="bayesian-deep-learning.png" />
 </p>
 </div>
@@ -322,7 +365,7 @@ This report gives an overview of Bayesian deep learning from a stochastic dynami
 </p>
 
 
-<div id="org07543b1" class="figure">
+<div id="orgf8827d9" class="figure">
 <p><img src="./res/img/interpretable-mechanistic-models-notes.png" alt="interpretable-mechanistic-models-notes.png" />
 </p>
 </div>
@@ -365,7 +408,7 @@ A short case study on what factors might influence life expectancy in the city o
 </p>
 
 
-<div id="orgaf899b2" class="figure">
+<div id="org41a078a" class="figure">
 <p><img src="./res/img/formalism.png" alt="formalism.png" />
 </p>
 </div>
@@ -373,6 +416,8 @@ A short case study on what factors might influence life expectancy in the city o
 <ul class="org-ul">
 <li><a href="./formalism.html">Text</a></li>
 </ul>
+
+<hr />
 </div>
 </div>
 <div id="outline-container-org188cf68" class="outline-3">
@@ -383,7 +428,7 @@ A short case study on what factors might influence life expectancy in the city o
 </p>
 
 
-<div id="orgd7e32db" class="figure">
+<div id="org2140ae5" class="figure">
 <p><img src="./res/img/bachelor-thesis.png" alt="bachelor-thesis.png" />
 </p>
 </div>
@@ -410,7 +455,7 @@ By iterating this process, multilingual acoustic models are bootstrapped and the
 </p>
 
 
-<div id="orgec73529" class="figure">
+<div id="org70baeae" class="figure">
 <p><img src="./res/img/can-computers-think.png" alt="can-computers-think.png" />
 </p>
 </div>
@@ -440,7 +485,7 @@ Will computers be able to think in a way that is equivalent – or even superior
 </p>
 
 
-<div id="org2a1aae4" class="figure">
+<div id="org57da90d" class="figure">
 <p><img src="./res/img/security.png" alt="security.png" />
 </p>
 </div>
@@ -464,7 +509,7 @@ A review of the most important definitions and results of the Security lecture g
 </p>
 
 
-<div id="orga12e33b" class="figure">
+<div id="org508ecbf" class="figure">
 <p><img src="./res/img/y-combinator.png" alt="y-combinator.png" />
 </p>
 </div>
@@ -492,7 +537,7 @@ Variable names are often chosen as a hint on the value they’re holding, but ar
 </p>
 
 
-<div id="org1a4701b" class="figure">
+<div id="org789fcfc" class="figure">
 <p><img src="./res/img/graph-theory.png" alt="graph-theory.png" />
 </p>
 </div>
@@ -517,7 +562,7 @@ A review of the most important definitions and results of the Graph Theory lectu
 </p>
 
 
-<div id="org6071df1" class="figure">
+<div id="org671e552" class="figure">
 <p><img src="./res/img/infinity.png" alt="infinity.png" />
 </p>
 </div>
@@ -542,7 +587,7 @@ Summary of set-theoretical definitions and theorems for my presentation (which w
 </p>
 
 
-<div id="org70368f9" class="figure">
+<div id="orgdc523cf" class="figure">
 <p><img src="./res/img/cells.png" alt="cells.png" />
 </p>
 </div>
@@ -560,7 +605,7 @@ Written report and presentation condensing multiple papers about the concept of 
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2024-02-19 Mon 14:52</p>
+<p class="date">Created: 2024-04-17 Wed 15:06</p>
 </div>
 </body>
 </html>
