@@ -3,12 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-04-17 Wed 15:06 -->
+<!-- 2024-11-25 Mon 12:08 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Niklas Bühler</title>
 <meta name="generator" content="Org Mode" />
-<style>
+<style type="text/css">
   #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
@@ -204,41 +204,84 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5b9a9cc">🎓 Academic Publications</a>
+<li><a href="#orgae9018a">🎓 Academic Publications</a>
 <ul>
-<li><a href="#org46f5086">🩻 Pilot Study for Large-scale Radiograph Pre-training</a></li>
-<li><a href="#orgd8758cb">🧬 Functional Gene Embeddings</a></li>
-<li><a href="#org5d0ed13">🧠 Connectome Informed Attention</a></li>
-<li><a href="#org9241df8">🧊 Bayesian Deep Learning &#x2013; A Stochastic Dynamics Perspective</a></li>
-<li><a href="#org6f2a9fa">🧬 Interpretable Mechanistic Models for Predicting Tissue-specific RBP Expression</a></li>
-<li><a href="#org12a631d">🌆 Case Study &#x2013; Life Expectancy in Barcelona</a></li>
-<li><a href="#orgab69248">🧮 Formalism 101</a></li>
-<li><a href="#org188cf68">🗣️ Crosslingual, Language-independent Phoneme Alignment</a></li>
-<li><a href="#org6993450">🤖 Can Computers Think?</a></li>
-<li><a href="#org332c77b">🔏 Security Review</a></li>
-<li><a href="#orgf5ab692">🍛 Cooking With Curry: Lambda Poetry</a></li>
-<li><a href="#orgc7178d7">🌐 Graph Theory Review</a></li>
-<li><a href="#orgdd19443">♾️ Mächtigkeiten, Kardinalzahlen und die Kontinuumshypothese</a></li>
-<li><a href="#org58f591c">🧫 Computation and Pattern Formation by Swarm Networks with Brownian Motion</a></li>
+<li><a href="#orgae1d294">🩻 Large-scale Radiograph Pre-training</a></li>
+<li><a href="#org20eab78">🩻 Pilot Study for Large-scale Radiograph Pre-training</a></li>
+<li><a href="#org909b3d0">🧬 Functional Gene Embeddings</a></li>
+<li><a href="#org332646b">🧠 Connectome Informed Attention</a></li>
+<li><a href="#orgcbbc899">🧊 Bayesian Deep Learning &#x2013; A Stochastic Dynamics Perspective</a></li>
+<li><a href="#orgf08a249">🧬 Interpretable Mechanistic Models for Predicting Tissue-specific RBP Expression</a></li>
+<li><a href="#org5b6b3c8">🌆 Case Study &#x2013; Life Expectancy in Barcelona</a></li>
+<li><a href="#orgd20bbe6">🧮 Formalism 101</a></li>
+<li><a href="#orgbee32b4">🗣️ Crosslingual, Language-independent Phoneme Alignment</a></li>
+<li><a href="#org1f2d244">🤖 Can Computers Think?</a></li>
+<li><a href="#org2ad687a">🔏 Security Review</a></li>
+<li><a href="#org549b700">🍛 Cooking With Curry: Lambda Poetry</a></li>
+<li><a href="#org6b35226">🌐 Graph Theory Review</a></li>
+<li><a href="#org4c82093">♾️ Mächtigkeiten, Kardinalzahlen und die Kontinuumshypothese</a></li>
+<li><a href="#org05b2d68">🧫 Computation and Pattern Formation by Swarm Networks with Brownian Motion</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <hr />
-<div id="outline-container-org5b9a9cc" class="outline-2">
-<h2 id="org5b9a9cc">🎓 Academic Publications</h2>
-<div class="outline-text-2" id="text-org5b9a9cc">
+<div id="outline-container-orgae9018a" class="outline-2">
+<h2 id="orgae9018a">🎓 Academic Publications</h2>
+<div class="outline-text-2" id="text-orgae9018a">
 </div>
-<div id="outline-container-org46f5086" class="outline-3">
-<h3 id="org46f5086">🩻 Pilot Study for Large-scale Radiograph Pre-training</h3>
-<div class="outline-text-3" id="text-org46f5086">
+<div id="outline-container-orgae1d294" class="outline-3">
+<h3 id="orgae1d294">🩻 Large-scale Radiograph Pre-training</h3>
+<div class="outline-text-3" id="text-orgae1d294">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2024-11-15 Fri]</span></span>
+</p>
+
+
+<div id="org8a104da" class="figure">
+<p><img src="./res/img/pretraining.png" alt="pretraining.png" />
+</p>
+</div>
+
+<p>
+In recent years, medical imaging datasets have expanded significantly, offering great potential for the development of machine learning solutions in the medical field.
+However, manual labeling of medical data is costly and poses a significant bottleneck to their utilization.
+</p>
+
+<p>
+Self-supervised learning (SSL) techniques offer a solution to this problem by extracting meaningful representations from the raw data itself, enabling label- and compute-efficient training of specialized models for downstream tasks.
+In this work, we demonstrate the effectiveness of SSL techniques, specifically the Masked Autoencoder (MAE) strategy, to generate such representations from a large-scale real-world clinical dataset comprising more than 600,000 radiograph images from various anatomical regions.
+</p>
+
+<p>
+We introduce a novel Dynamic Batch Binning technique that reduces necessary compute by 80% when training on datasets with high image resolution variability.
+Our results across several clinically relevant downstream tasks show that the generated representations substantially reduce the dependence on labeled data.
+This is evidenced by superior performance when comparing to supervised training from scratch.
+Furthermore, we demonstrate the efficacy of domain-specific pre-training by achieving improved performance on the specialized medical task of fracture detection, compared to broader ImageNet-21k pre-training, despite using only 5% of its training samples and 0.5% of its training iterations during pre-training.
+</p>
+
+<p>
+Our research thus demonstrates the potential of domain-specific MAE pre-training to significantly reduce the need for labeled training data in the medical domain, enabling a more effective utilization of large medical datasets with minimal labels.
+</p>
+
+<ul class="org-ul">
+<li><a href="./res/pub/Large-scale Radiograph Pre-training.pdf">Thesis</a></li>
+<li><a href="./res/pub/Large-scale Radiograph Pre-training Poster.pdf">Poster</a></li>
+</ul>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-org20eab78" class="outline-3">
+<h3 id="org20eab78">🩻 Pilot Study for Large-scale Radiograph Pre-training</h3>
+<div class="outline-text-3" id="text-org20eab78">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2024-04-17 Wed]</span></span>
 </p>
 
 
-<div id="org0a9929e" class="figure">
+<div id="orged044e0" class="figure">
 <p><img src="./res/img/irma.png" alt="irma.png" />
 </p>
 </div>
@@ -272,15 +315,15 @@ This pilot study thus establishes the foundation for applying the MAE strategy t
 <hr />
 </div>
 </div>
-<div id="outline-container-orgd8758cb" class="outline-3">
-<h3 id="orgd8758cb">🧬 Functional Gene Embeddings</h3>
-<div class="outline-text-3" id="text-orgd8758cb">
+<div id="outline-container-org909b3d0" class="outline-3">
+<h3 id="org909b3d0">🧬 Functional Gene Embeddings</h3>
+<div class="outline-text-3" id="text-org909b3d0">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2024-02-08 Thu]</span></span>
 </p>
 
 
-<div id="orgcdb4851" class="figure">
+<div id="orgc1946cd" class="figure">
 <p><img src="./res/img/functional-gene-embedding.png" alt="functional-gene-embedding.png" />
 </p>
 </div>
@@ -301,15 +344,15 @@ performances.
 <hr />
 </div>
 </div>
-<div id="outline-container-org5d0ed13" class="outline-3">
-<h3 id="org5d0ed13">🧠 Connectome Informed Attention</h3>
-<div class="outline-text-3" id="text-org5d0ed13">
+<div id="outline-container-org332646b" class="outline-3">
+<h3 id="org332646b">🧠 Connectome Informed Attention</h3>
+<div class="outline-text-3" id="text-org332646b">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2023-02-16 Thu]</span></span>
 </p>
 
 
-<div id="orge237c6a" class="figure">
+<div id="org07a602a" class="figure">
 <p><img src="./res/img/connectome-informed-attention.png" alt="connectome-informed-attention.png" />
 </p>
 </div>
@@ -332,15 +375,15 @@ We predict tau spreading behavior for Altzheimer&rsquo;s patients, based on a co
 <hr />
 </div>
 </div>
-<div id="outline-container-org9241df8" class="outline-3">
-<h3 id="org9241df8">🧊 Bayesian Deep Learning &#x2013; A Stochastic Dynamics Perspective</h3>
-<div class="outline-text-3" id="text-org9241df8">
+<div id="outline-container-orgcbbc899" class="outline-3">
+<h3 id="orgcbbc899">🧊 Bayesian Deep Learning &#x2013; A Stochastic Dynamics Perspective</h3>
+<div class="outline-text-3" id="text-orgcbbc899">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2023-01-29 Sun]</span></span>
 </p>
 
 
-<div id="org4bde17c" class="figure">
+<div id="orgf456e3b" class="figure">
 <p><img src="./res/img/bayesian-deep-learning.png" alt="bayesian-deep-learning.png" />
 </p>
 </div>
@@ -357,15 +400,15 @@ This report gives an overview of Bayesian deep learning from a stochastic dynami
 <hr />
 </div>
 </div>
-<div id="outline-container-org6f2a9fa" class="outline-3">
-<h3 id="org6f2a9fa">🧬 Interpretable Mechanistic Models for Predicting Tissue-specific RBP Expression</h3>
-<div class="outline-text-3" id="text-org6f2a9fa">
+<div id="outline-container-orgf08a249" class="outline-3">
+<h3 id="orgf08a249">🧬 Interpretable Mechanistic Models for Predicting Tissue-specific RBP Expression</h3>
+<div class="outline-text-3" id="text-orgf08a249">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2022-07-25 Mon]</span></span>
 </p>
 
 
-<div id="orgf8827d9" class="figure">
+<div id="org7150132" class="figure">
 <p><img src="./res/img/interpretable-mechanistic-models-notes.png" alt="interpretable-mechanistic-models-notes.png" />
 </p>
 </div>
@@ -382,9 +425,9 @@ In this report, we predict expression patterns of different RNA-binding proteins
 <hr />
 </div>
 </div>
-<div id="outline-container-org12a631d" class="outline-3">
-<h3 id="org12a631d">🌆 Case Study &#x2013; Life Expectancy in Barcelona</h3>
-<div class="outline-text-3" id="text-org12a631d">
+<div id="outline-container-org5b6b3c8" class="outline-3">
+<h3 id="org5b6b3c8">🌆 Case Study &#x2013; Life Expectancy in Barcelona</h3>
+<div class="outline-text-3" id="text-org5b6b3c8">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2022-01-23 Sun]</span></span>
 </p>
@@ -400,15 +443,15 @@ A short case study on what factors might influence life expectancy in the city o
 <hr />
 </div>
 </div>
-<div id="outline-container-orgab69248" class="outline-3">
-<h3 id="orgab69248">🧮 Formalism 101</h3>
-<div class="outline-text-3" id="text-orgab69248">
+<div id="outline-container-orgd20bbe6" class="outline-3">
+<h3 id="orgd20bbe6">🧮 Formalism 101</h3>
+<div class="outline-text-3" id="text-orgd20bbe6">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2022-01-04 Tue]</span></span>
 </p>
 
 
-<div id="org41a078a" class="figure">
+<div id="orgfc45115" class="figure">
 <p><img src="./res/img/formalism.png" alt="formalism.png" />
 </p>
 </div>
@@ -420,15 +463,15 @@ A short case study on what factors might influence life expectancy in the city o
 <hr />
 </div>
 </div>
-<div id="outline-container-org188cf68" class="outline-3">
-<h3 id="org188cf68">🗣️ Crosslingual, Language-independent Phoneme Alignment</h3>
-<div class="outline-text-3" id="text-org188cf68">
+<div id="outline-container-orgbee32b4" class="outline-3">
+<h3 id="orgbee32b4">🗣️ Crosslingual, Language-independent Phoneme Alignment</h3>
+<div class="outline-text-3" id="text-orgbee32b4">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2021-10-01 Fri]</span></span>
 </p>
 
 
-<div id="org2140ae5" class="figure">
+<div id="orgb1b9ade" class="figure">
 <p><img src="./res/img/bachelor-thesis.png" alt="bachelor-thesis.png" />
 </p>
 </div>
@@ -447,15 +490,15 @@ By iterating this process, multilingual acoustic models are bootstrapped and the
 <hr />
 </div>
 </div>
-<div id="outline-container-org6993450" class="outline-3">
-<h3 id="org6993450">🤖 Can Computers Think?</h3>
-<div class="outline-text-3" id="text-org6993450">
+<div id="outline-container-org1f2d244" class="outline-3">
+<h3 id="org1f2d244">🤖 Can Computers Think?</h3>
+<div class="outline-text-3" id="text-org1f2d244">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2021-08-04 Wed]</span></span>
 </p>
 
 
-<div id="org70baeae" class="figure">
+<div id="org8f812f4" class="figure">
 <p><img src="./res/img/can-computers-think.png" alt="can-computers-think.png" />
 </p>
 </div>
@@ -477,15 +520,15 @@ Will computers be able to think in a way that is equivalent – or even superior
 <hr />
 </div>
 </div>
-<div id="outline-container-org332c77b" class="outline-3">
-<h3 id="org332c77b">🔏 Security Review</h3>
-<div class="outline-text-3" id="text-org332c77b">
+<div id="outline-container-org2ad687a" class="outline-3">
+<h3 id="org2ad687a">🔏 Security Review</h3>
+<div class="outline-text-3" id="text-org2ad687a">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2020-07-30 Thu]</span></span>
 </p>
 
 
-<div id="org57da90d" class="figure">
+<div id="org99eea4a" class="figure">
 <p><img src="./res/img/security.png" alt="security.png" />
 </p>
 </div>
@@ -501,15 +544,15 @@ A review of the most important definitions and results of the Security lecture g
 <hr />
 </div>
 </div>
-<div id="outline-container-orgf5ab692" class="outline-3">
-<h3 id="orgf5ab692">🍛 Cooking With Curry: Lambda Poetry</h3>
-<div class="outline-text-3" id="text-orgf5ab692">
+<div id="outline-container-org549b700" class="outline-3">
+<h3 id="org549b700">🍛 Cooking With Curry: Lambda Poetry</h3>
+<div class="outline-text-3" id="text-org549b700">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2020-08-03 Mon]</span></span>
 </p>
 
 
-<div id="org508ecbf" class="figure">
+<div id="org8e1ff4e" class="figure">
 <p><img src="./res/img/y-combinator.png" alt="y-combinator.png" />
 </p>
 </div>
@@ -529,15 +572,15 @@ Variable names are often chosen as a hint on the value they’re holding, but ar
 <hr />
 </div>
 </div>
-<div id="outline-container-orgc7178d7" class="outline-3">
-<h3 id="orgc7178d7">🌐 Graph Theory Review</h3>
-<div class="outline-text-3" id="text-orgc7178d7">
+<div id="outline-container-org6b35226" class="outline-3">
+<h3 id="org6b35226">🌐 Graph Theory Review</h3>
+<div class="outline-text-3" id="text-org6b35226">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2020-02-20 Thu]</span></span>
 </p>
 
 
-<div id="org789fcfc" class="figure">
+<div id="org22e6441" class="figure">
 <p><img src="./res/img/graph-theory.png" alt="graph-theory.png" />
 </p>
 </div>
@@ -554,15 +597,15 @@ A review of the most important definitions and results of the Graph Theory lectu
 <hr />
 </div>
 </div>
-<div id="outline-container-orgdd19443" class="outline-3">
-<h3 id="orgdd19443">♾️ Mächtigkeiten, Kardinalzahlen und die Kontinuumshypothese</h3>
-<div class="outline-text-3" id="text-orgdd19443">
+<div id="outline-container-org4c82093" class="outline-3">
+<h3 id="org4c82093">♾️ Mächtigkeiten, Kardinalzahlen und die Kontinuumshypothese</h3>
+<div class="outline-text-3" id="text-org4c82093">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2019-12-17 Tue]</span></span>
 </p>
 
 
-<div id="org671e552" class="figure">
+<div id="orgbdfe5b0" class="figure">
 <p><img src="./res/img/infinity.png" alt="infinity.png" />
 </p>
 </div>
@@ -579,15 +622,15 @@ Summary of set-theoretical definitions and theorems for my presentation (which w
 <hr />
 </div>
 </div>
-<div id="outline-container-org58f591c" class="outline-3">
-<h3 id="org58f591c">🧫 Computation and Pattern Formation by Swarm Networks with Brownian Motion</h3>
-<div class="outline-text-3" id="text-org58f591c">
+<div id="outline-container-org05b2d68" class="outline-3">
+<h3 id="org05b2d68">🧫 Computation and Pattern Formation by Swarm Networks with Brownian Motion</h3>
+<div class="outline-text-3" id="text-org05b2d68">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2019-07-22 Mon]</span></span>
 </p>
 
 
-<div id="orgdc523cf" class="figure">
+<div id="orgcc5e7a6" class="figure">
 <p><img src="./res/img/cells.png" alt="cells.png" />
 </p>
 </div>
@@ -605,7 +648,7 @@ Written report and presentation condensing multiple papers about the concept of 
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2024-04-17 Wed 15:06</p>
+<p class="date">Created: 2024-11-25 Mon 12:08</p>
 </div>
 </body>
 </html>
