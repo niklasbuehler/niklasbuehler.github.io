@@ -1,606 +1,330 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- 2024-11-25 Mon 12:08 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Niklas Bühler</title>
-<meta name="generator" content="Org Mode" />
-<style type="text/css">
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
+<meta name="description" content="Niklas Bühler — academic publications and writing." />
+<link rel="icon" type="image/x-icon" href="/res/favicon.ico" />
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #6b6b6b;
+    --accent: #35618f;
+    --border: #e6e6e6;
+    --chip-bg: #f2f2f2;
   }
-  pre.src {
-    position: relative;
-    overflow: auto;
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181c;
+      --fg: #e8e8e8;
+      --muted: #9a9a9a;
+      --accent: #7fb0e0;
+      --border: #2a2d33;
+      --chip-bg: #1f2226;
+    }
   }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
+  * { box-sizing: border-box; }
+  html { font-size: 16px; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+    margin: 0;
+    padding: 3.5rem 1.25rem 5rem;
   }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
+  #content {
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+  header {
     text-align: center;
-    width: 100%;
+    margin-bottom: 2.5rem;
   }
-  .equation {
-    vertical-align: middle;
+  h1 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0 0 .3rem;
   }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
+  .subtitle {
+    color: var(--muted);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
   }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
+  .bio {
+    color: var(--muted);
+    font-size: .92rem;
+    margin: .8rem 0 0;
   }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
+  nav.toc {
+    text-align: center;
+    font-size: .85rem;
+    color: var(--muted);
+    margin: 0 0 2.5rem;
+    line-height: 1.9;
+  }
+  nav.toc a {
+    color: var(--muted);
+    text-decoration: none;
+    margin: 0 .4rem;
+  }
+  nav.toc a:hover { color: var(--accent); }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  a:hover { text-decoration: underline; }
+  .pub {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    scroll-margin-top: 1.5rem;
+  }
+  .pub:last-child { padding-bottom: 0; }
+  .pub img {
+    display: block;
+    max-width: 100%;
+    max-height: 20rem;
+    margin: 0 auto 1.1rem;
+    border-radius: .5rem;
+  }
+  .pub-body h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 .15rem;
+  }
+  .pub-body time {
+    display: block;
+    font-size: .78rem;
+    color: var(--muted);
+    margin-bottom: .8rem;
+  }
+  .pub-body p {
+    margin: 0 0 .6rem;
+  }
+  .links {
+    font-size: .85rem;
+  }
+  .links a { margin-right: .9rem; white-space: nowrap; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: .8rem;
+    margin-top: 3.5rem;
+  }
+  footer a { margin: 0 .4rem; }
 </style>
-<link rel="stylesheet" href="res/pico.min.css" /><link rel="stylesheet" href="res/style.css" /><link rel="icon" type="image/x-icon" href="/res/favicon.ico">
 </head>
 <body>
-<div id="content" class="content">
-<h1 class="title">Niklas Bühler
-<br />
-<span class="subtitle">Escaping local optima on a random walk through life.</span>
-</h1>
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#orgae9018a">🎓 Academic Publications</a>
-<ul>
-<li><a href="#orgae1d294">🩻 Large-scale Radiograph Pre-training</a></li>
-<li><a href="#org20eab78">🩻 Pilot Study for Large-scale Radiograph Pre-training</a></li>
-<li><a href="#org909b3d0">🧬 Functional Gene Embeddings</a></li>
-<li><a href="#org332646b">🧠 Connectome Informed Attention</a></li>
-<li><a href="#orgcbbc899">🧊 Bayesian Deep Learning &#x2013; A Stochastic Dynamics Perspective</a></li>
-<li><a href="#orgf08a249">🧬 Interpretable Mechanistic Models for Predicting Tissue-specific RBP Expression</a></li>
-<li><a href="#orgd20bbe6">🧮 Formalism 101</a></li>
-<li><a href="#orgbee32b4">🗣️ Crosslingual, Language-independent Phoneme Alignment</a></li>
-<li><a href="#org1f2d244">🤖 Can Computers Think?</a></li>
-<li><a href="#org2ad687a">🔏 Security Review</a></li>
-<li><a href="#org6b35226">🌐 Graph Theory Review</a></li>
-<li><a href="#org4c82093">♾️ Mächtigkeiten, Kardinalzahlen und die Kontinuumshypothese</a></li>
-<li><a href="#org05b2d68">🧫 Computation and Pattern Formation by Swarm Networks with Brownian Motion</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-<hr />
-<div id="outline-container-orgae9018a" class="outline-2">
-<h2 id="orgae9018a">🎓 Academic Publications</h2>
-<div class="outline-text-2" id="text-orgae9018a">
-</div>
-<div id="outline-container-orgae1d294" class="outline-3">
-<h3 id="orgae1d294">🩻 Large-scale Radiograph Pre-training</h3>
-<div class="outline-text-3" id="text-orgae1d294">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">[2024-11-15 Fri]</span></span>
-</p>
-
-
-<div id="org8a104da" class="figure">
-<p><img src="./res/img/pretraining.png" alt="pretraining.png" />
-</p>
-</div>
-
-<p>
-In recent years, medical imaging datasets have expanded significantly, offering great potential for the development of machine learning solutions in the medical field.
-However, manual labeling of medical data is costly and poses a significant bottleneck to their utilization.
-</p>
-
-<p>
-Self-supervised learning (SSL) techniques offer a solution to this problem by extracting meaningful representations from the raw data itself, enabling label- and compute-efficient training of specialized models for downstream tasks.
-In this work, we demonstrate the effectiveness of SSL techniques, specifically the Masked Autoencoder (MAE) strategy, to generate such representations from a large-scale real-world clinical dataset comprising more than 600,000 radiograph images from various anatomical regions.
-</p>
-
-<p>
-We introduce a novel Dynamic Batch Binning technique that reduces necessary compute by 80% when training on datasets with high image resolution variability.
-Our results across several clinically relevant downstream tasks show that the generated representations substantially reduce the dependence on labeled data.
-This is evidenced by superior performance when comparing to supervised training from scratch.
-Furthermore, we demonstrate the efficacy of domain-specific pre-training by achieving improved performance on the specialized medical task of fracture detection, compared to broader ImageNet-21k pre-training, despite using only 5% of its training samples and 0.5% of its training iterations during pre-training.
-</p>
-
-<p>
-Our research thus demonstrates the potential of domain-specific MAE pre-training to significantly reduce the need for labeled training data in the medical domain, enabling a more effective utilization of large medical datasets with minimal labels.
-</p>
-
-<ul class="org-ul">
-<li><a href="./res/pub/Large-scale Radiograph Pre-training.pdf">Thesis</a></li>
-<li><a href="./res/pub/Large-scale Radiograph Pre-training Poster.pdf">Poster</a></li>
-</ul>
-
-<hr />
-</div>
-</div>
-<div id="outline-container-org20eab78" class="outline-3">
-<h3 id="org20eab78">🩻 Pilot Study for Large-scale Radiograph Pre-training</h3>
-<div class="outline-text-3" id="text-org20eab78">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">[2024-04-17 Wed]</span></span>
-</p>
-
-
-<div id="orged044e0" class="figure">
-<p><img src="./res/img/irma.png" alt="irma.png" />
-</p>
-</div>
-
-<p>
-In recent years, medical datasets have expanded significantly, offering great potential for the development of machine learning applications in the medical field.
-However, manual labeling of such data is costly and poses a significant bottleneck to their utilization.
-</p>
-
-<p>
-To address this issue, self-supervised learning (SSL) exploits the data itself to learn embeddings that can be quickly adapted to downstream tasks as needed.
-</p>
-
-<p>
-In this work, we show the suitability of self-supervised learning techniques, specifically masked autoencoders (MAE), to generate such embeddings from a large clinical dataset comprising 12,000 radiograph images from various anatomical regions.
-</p>
-
-<p>
-By pre-training a MAE model on producing these high-quality embeddings, the need for labeled data in downstream tasks is substantially reduced.
-This is evidenced by a linear classifier trained on representations from this MAE model achieving 84.58% top-1 accuracy on bodypart classification when using only 1% of data, marking a 7% relative improvement over fully supervised training.
-</p>
-
-<p>
-This pilot study thus establishes the foundation for applying the MAE strategy to our own large-scale real-world radiograph dataset, comprising 700,000 radiograph images, as well as evaluating on more complex downstream tasks in future work.
-</p>
-
-<ul class="org-ul">
-<li><a href="./res/pub/pilot-study-for-large-scale-radiograph-pre-training.pdf">Report</a></li>
-</ul>
-
-<hr />
-</div>
-</div>
-<div id="outline-container-org909b3d0" class="outline-3">
-<h3 id="org909b3d0">🧬 Functional Gene Embeddings</h3>
-<div class="outline-text-3" id="text-org909b3d0">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">[2024-02-08 Thu]</span></span>
-</p>
-
-
-<div id="orgc1946cd" class="figure">
-<p><img src="./res/img/functional-gene-embedding.png" alt="functional-gene-embedding.png" />
-</p>
-</div>
-
-<p>
-Functional gene embeddings, numerical vectors capturing gene functions, can provide useful representations of genes for downstream analyses. In this project, we
-extracted functional gene embeddings from transcription data and other genomewide measurements by using principle components, autoencoders and a Variational
-Deep Tensor Factorization model. We used these embeddings, as well as embeddings from other publications, as gene features in the prediction of genome-wide
-association study summary statistics for a diverse set of traits and compared their
-performances.
-</p>
-
-<ul class="org-ul">
-<li><a href="./res/pub/functional-gene-embeddings.pdf">Report</a></li>
-<li><a href="./res/pub/functional-gene-embeddings-slides.pdf">Slides</a></li>
-</ul>
-
-<hr />
-</div>
-</div>
-<div id="outline-container-org332646b" class="outline-3">
-<h3 id="org332646b">🧠 Connectome Informed Attention</h3>
-<div class="outline-text-3" id="text-org332646b">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">[2023-02-16 Thu]</span></span>
-</p>
-
-
-<div id="org07a602a" class="figure">
-<p><img src="./res/img/connectome-informed-attention.png" alt="connectome-informed-attention.png" />
-</p>
-</div>
-
-<p>
-We predict tau spreading behavior for Altzheimer&rsquo;s patients, based on a connectivity map and tau PET scans of the brain.
-</p>
-
-<ul class="org-ul">
-<li><a href="./res/pub/adlm/presentation-1.pdf">Initial Presentation</a></li>
-<li><a href="./res/pub/adlm/presentation-2.pdf">Second Presentation</a></li>
-<li><a href="./res/pub/adlm/presentation-3.pdf">Third Presentation</a></li>
-<li><a href="./res/pub/adlm/presentation-4.pdf">Fourth Presentation</a></li>
-<li><a href="./res/pub/adlm/presentation-5.pdf">Fifth Presentation</a></li>
-<li><a href="./res/pub/adlm/presentation-6.pdf">Sixth Presentation</a></li>
-<li><a href="./res/pub/adlm/poster.pdf">Final Poster</a></li>
-<li><a href="https://github.com/niklasbuehler/connectome-informed-attention">Github Repository</a></li>
-</ul>
-
-<hr />
-</div>
-</div>
-<div id="outline-container-orgcbbc899" class="outline-3">
-<h3 id="orgcbbc899">🧊 Bayesian Deep Learning &#x2013; A Stochastic Dynamics Perspective</h3>
-<div class="outline-text-3" id="text-orgcbbc899">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">[2023-01-29 Sun]</span></span>
-</p>
-
-
-<div id="orgf456e3b" class="figure">
-<p><img src="./res/img/bayesian-deep-learning.png" alt="bayesian-deep-learning.png" />
-</p>
-</div>
-
-<p>
-This report gives an overview of Bayesian deep learning from a stochastic dynamics perspective by first introducing Bayesian deep learning as well as two important methods for training Bayesian neural networks, and then building upon this fundament by presenting various approaches and variations inspired by stochastic dynamics.
-</p>
-
-<ul class="org-ul">
-<li><a href="./res/pub/bdl_report.pdf">Report</a></li>
-<li><a href="./res/pub/bdl_presentation.pdf">Presentation</a></li>
-</ul>
-
-<hr />
-</div>
-</div>
-<div id="outline-container-orgf08a249" class="outline-3">
-<h3 id="orgf08a249">🧬 Interpretable Mechanistic Models for Predicting Tissue-specific RBP Expression</h3>
-<div class="outline-text-3" id="text-orgf08a249">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">[2022-07-25 Mon]</span></span>
-</p>
-
-
-<div id="org7150132" class="figure">
-<p><img src="./res/img/interpretable-mechanistic-models-notes.png" alt="interpretable-mechanistic-models-notes.png" />
-</p>
-</div>
-
-<p>
-In this report, we predict expression patterns of different RNA-binding proteins across tissue types. As our results were mostly supported by the literature and experimental data, they could lead to discovery of previously unknown expression patterns of RBPs.
-</p>
-
-<ul class="org-ul">
-<li><a href="./res/pub/mechanistic-models-notes.pdf">Sketch</a></li>
-<li><a href="./res/pub/mechanistic-models.pdf">Report</a></li>
-</ul>
-
-<hr />
-</div>
-</div>
-<div id="outline-container-orgd20bbe6" class="outline-3">
-<h3 id="orgd20bbe6">🧮 Formalism 101</h3>
-<div class="outline-text-3" id="text-orgd20bbe6">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">[2022-01-04 Tue]</span></span>
-</p>
-
-
-<div id="orgfc45115" class="figure">
-<p><img src="./res/img/formalism.png" alt="formalism.png" />
-</p>
-</div>
-
-<ul class="org-ul">
-<li><a href="./formalism.html">Text</a></li>
-</ul>
-
-<hr />
-</div>
-</div>
-<div id="outline-container-orgbee32b4" class="outline-3">
-<h3 id="orgbee32b4">🗣️ Crosslingual, Language-independent Phoneme Alignment</h3>
-<div class="outline-text-3" id="text-orgbee32b4">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">[2021-10-01 Fri]</span></span>
-</p>
-
-
-<div id="orgb1b9ade" class="figure">
-<p><img src="./res/img/bachelor-thesis.png" alt="bachelor-thesis.png" />
-</p>
-</div>
-
-<p>
-The goal of this thesis is to apply cross-lingual, multilingual techniques on the task of phoneme alignment, i.e. the task of temporally aligning a phonetic transcript to its corresponding audio recording.
-Three different neural network architectures are trained on a multilingual data set and utilized as a source of emission probabilities in hybrid HMM/ANN systems. These HMM/ANN systems enable the computation of phoneme alignments via the Viterbi algorithm.
-By iterating this process, multilingual acoustic models are bootstrapped and the resulting systems are used to cross-lingually align data from a previously unseen target language.
-</p>
-
-<ul class="org-ul">
-<li><a href="./res/pub/thesis.pdf">Thesis</a></li>
-<li><a href="./res/pub/thesis-slides.pdf">Slides</a></li>
-</ul>
-
-<hr />
-</div>
-</div>
-<div id="outline-container-org1f2d244" class="outline-3">
-<h3 id="org1f2d244">🤖 Can Computers Think?</h3>
-<div class="outline-text-3" id="text-org1f2d244">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">[2021-08-04 Wed]</span></span>
-</p>
-
-
-<div id="org8f812f4" class="figure">
-<p><img src="./res/img/can-computers-think.png" alt="can-computers-think.png" />
-</p>
-</div>
-
-<p>
-Human intelligence has been the defining property of the human race for
-thousands of years.
-However, with the recent rise of machine learning, amplified by breakthrough
-results in deep learning, this opinion is cast in questionable light, as the
-opposing question starts to become more relevant and polarizing than ever
-before:
-Will computers be able to think in a way that is equivalent – or even superior – to ours?
-</p>
-
-<ul class="org-ul">
-<li><a href="./can-computers-think.html">Essay</a></li>
-</ul>
-
-<hr />
-</div>
-</div>
-<div id="outline-container-org2ad687a" class="outline-3">
-<h3 id="org2ad687a">🔏 Security Review</h3>
-<div class="outline-text-3" id="text-org2ad687a">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">[2020-07-30 Thu]</span></span>
-</p>
-
-
-<div id="org99eea4a" class="figure">
-<p><img src="./res/img/security.png" alt="security.png" />
-</p>
-</div>
-
-<p>
-A review of the most important definitions and results of the Security lecture given at KIT.
-</p>
-
-<ul class="org-ul">
-<li><a href="./res/pub/security-review.pdf">Review</a></li>
-</ul>
-
-<hr />
-</div>
-</div>
-<div id="outline-container-org6b35226" class="outline-3">
-<h3 id="org6b35226">🌐 Graph Theory Review</h3>
-<div class="outline-text-3" id="text-org6b35226">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">[2020-02-20 Thu]</span></span>
-</p>
-
-
-<div id="org22e6441" class="figure">
-<p><img src="./res/img/graph-theory.png" alt="graph-theory.png" />
-</p>
-</div>
-
-<p>
-A review of the most important definitions and results of the Graph Theory lecture given at KIT.
-</p>
-
-<ul class="org-ul">
-<li><a href="./res/pub/graph-theory-review.pdf">Review</a></li>
-<li><a href="./res/pub/anki-graphtheory.apkg">Anki Deck</a></li>
-</ul>
-
-<hr />
-</div>
-</div>
-<div id="outline-container-org4c82093" class="outline-3">
-<h3 id="org4c82093">♾️ Mächtigkeiten, Kardinalzahlen und die Kontinuumshypothese</h3>
-<div class="outline-text-3" id="text-org4c82093">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">[2019-12-17 Tue]</span></span>
-</p>
-
-
-<div id="orgbdfe5b0" class="figure">
-<p><img src="./res/img/infinity.png" alt="infinity.png" />
-</p>
-</div>
-
-<p>
-Summary of set-theoretical definitions and theorems for my presentation (which was done on blackboard).
-</p>
-
-<ul class="org-ul">
-<li><a href="./res/pub/proseminar-grundlagen-mathematik.pdf">Summary</a></li>
-<li><a href="./res/pub/proseminar-grundlagen-mathematik-nachtrag.pdf">Followup</a></li>
-</ul>
-
-<hr />
-</div>
-</div>
-<div id="outline-container-org05b2d68" class="outline-3">
-<h3 id="org05b2d68">🧫 Computation and Pattern Formation by Swarm Networks with Brownian Motion</h3>
-<div class="outline-text-3" id="text-org05b2d68">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">[2019-07-22 Mon]</span></span>
-</p>
-
-
-<div id="orgcc5e7a6" class="figure">
-<p><img src="./res/img/cells.png" alt="cells.png" />
-</p>
-</div>
-
-<p>
-Written report and presentation condensing multiple papers about the concept of Swarm Networks introduced by Isokawa and Peper.
-</p>
-
-<ul class="org-ul">
-<li><a href="./res/pub/swarm-networks.pdf">Report</a></li>
-<li><a href="./res/pub/swarm-networks-presentation.pdf">Slides</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div id="postamble" class="status">
-<p class="date">Created: 2024-11-25 Mon 12:08</p>
+<div id="content">
+
+<header>
+  <h1>Niklas Bühler</h1>
+  <p class="subtitle">Escaping local optima on a random walk through life.</p>
+  <p class="bio">PhD candidate at the <a href="https://kiinformatik.mri.tum.de/de/team/niklas_buehler">Chair for Artificial Intelligence in Medicine, TUM</a>, working on representation learning for medical imaging and multimodal disease risk prediction.</p>
+</header>
+
+<!--
+<nav class="toc">
+  <a href="#radiograph-pretraining">Radiograph Pre-training</a>·
+  <a href="#radiograph-pretraining-pilot">Pilot Study</a>·
+  <a href="#gene-embeddings">Gene Embeddings</a>·
+  <a href="#connectome-attention">Connectome Attention</a>·
+  <a href="#bayesian-deep-learning">Bayesian Deep Learning</a>·
+  <a href="#rbp-expression">RBP Expression</a>·
+  <a href="#formalism-101">Formalism 101</a>·
+  <a href="#phoneme-alignment">Phoneme Alignment</a>·
+  <a href="#can-computers-think">Can Computers Think?</a>·
+  <a href="#security-review">Security Review</a>·
+  <a href="#graph-theory-review">Graph Theory Review</a>·
+  <a href="#continuum-hypothesis">Kontinuumshypothese</a>·
+  <a href="#swarm-networks">Swarm Networks</a>
+</nav>
+-->
+
+<main>
+
+<article class="pub" id="radiograph-pretraining">
+  <img src="./res/img/pretraining.png" alt="" />
+  <div class="pub-body">
+    <h3>🩻 Large-scale Radiograph Pre-training</h3>
+    <time>2024-11-15</time>
+    <p>Master's thesis on self-supervised MAE pre-training over 600,000+ clinical radiographs, cutting the need for labeled data across downstream medical imaging tasks.</p>
+    <p class="links">
+      <a href="./res/pub/Large-scale Radiograph Pre-training.pdf">Thesis</a>
+      <a href="./res/pub/Large-scale Radiograph Pre-training Poster.pdf">Poster</a>
+    </p>
+  </div>
+</article>
+
+<article class="pub" id="radiograph-pretraining-pilot">
+  <img src="./res/img/irma.png" alt="" />
+  <div class="pub-body">
+    <h3>🩻 Pilot Study for Large-scale Radiograph Pre-training</h3>
+    <time>2024-04-17</time>
+    <p>Pilot study showing that MAE-based self-supervised learning on 12,000 radiographs substantially improves label efficiency for bodypart classification.</p>
+    <p class="links">
+      <a href="./res/pub/pilot-study-for-large-scale-radiograph-pre-training.pdf">Report</a>
+    </p>
+  </div>
+</article>
+
+<article class="pub" id="gene-embeddings">
+  <img src="./res/img/functional-gene-embedding.png" alt="" />
+  <div class="pub-body">
+    <h3>🧬 Functional Gene Embeddings</h3>
+    <time>2024-02-08</time>
+    <p>Extracted functional gene embeddings via PCA, autoencoders, and a variational tensor factorization model, and evaluated them on GWAS trait prediction.</p>
+    <p class="links">
+      <a href="./res/pub/functional-gene-embeddings.pdf">Report</a>
+      <a href="./res/pub/functional-gene-embeddings-slides.pdf">Slides</a>
+    </p>
+  </div>
+</article>
+
+<article class="pub" id="connectome-attention">
+  <img src="./res/img/connectome-informed-attention.png" alt="" />
+  <div class="pub-body">
+    <h3>🧠 Connectome Informed Attention</h3>
+    <time>2023-02-16</time>
+    <p>Predicting tau spreading behavior in Alzheimer's patients from brain connectivity maps and tau PET scans.</p>
+    <p class="links">
+      <a href="./res/pub/adlm/presentation-1.pdf">Presentations 1</a>
+      <a href="./res/pub/adlm/presentation-2.pdf">2</a>
+      <a href="./res/pub/adlm/presentation-3.pdf">3</a>
+      <a href="./res/pub/adlm/presentation-4.pdf">4</a>
+      <a href="./res/pub/adlm/presentation-5.pdf">5</a>
+      <a href="./res/pub/adlm/presentation-6.pdf">6</a>
+      <a href="./res/pub/adlm/poster.pdf">Poster</a>
+      <a href="https://github.com/niklasbuehler/connectome-informed-attention">GitHub</a>
+    </p>
+  </div>
+</article>
+
+<article class="pub" id="bayesian-deep-learning">
+  <img src="./res/img/bayesian-deep-learning.png" alt="" />
+  <div class="pub-body">
+    <h3>🧊 Bayesian Deep Learning &ndash; A Stochastic Dynamics Perspective</h3>
+    <time>2023-01-29</time>
+    <p>Overview of Bayesian deep learning through the lens of stochastic dynamics, covering the key methods used to train Bayesian neural networks.</p>
+    <p class="links">
+      <a href="./res/pub/bdl_report.pdf">Report</a>
+      <a href="./res/pub/bdl_presentation.pdf">Presentation</a>
+    </p>
+  </div>
+</article>
+
+<article class="pub" id="rbp-expression">
+  <img src="./res/img/interpretable-mechanistic-models-notes.png" alt="" />
+  <div class="pub-body">
+    <h3>🧬 Interpretable Mechanistic Models for Predicting Tissue-specific RBP Expression</h3>
+    <time>2022-07-25</time>
+    <p>Predicting tissue-specific expression patterns of RNA-binding proteins with interpretable mechanistic models, mostly corroborated by literature and experimental data.</p>
+    <p class="links">
+      <a href="./res/pub/mechanistic-models-notes.pdf">Sketch</a>
+      <a href="./res/pub/mechanistic-models.pdf">Report</a>
+    </p>
+  </div>
+</article>
+
+<article class="pub" id="formalism-101">
+  <img src="./res/img/formalism.png" alt="" />
+  <div class="pub-body">
+    <h3>🧮 Formalism 101</h3>
+    <time>2022-01-04</time>
+    <p>Notes distilling the core definitions of formal languages and computability theory.</p>
+    <p class="links">
+      <a href="./formalism.html">Text</a>
+    </p>
+  </div>
+</article>
+
+<article class="pub" id="phoneme-alignment">
+  <img src="./res/img/bachelor-thesis.png" alt="" />
+  <div class="pub-body">
+    <h3>🗣️ Crosslingual, Language-independent Phoneme Alignment</h3>
+    <time>2021-10-01</time>
+    <p>Bachelor's thesis applying cross-lingual, multilingual techniques to phoneme alignment, using hybrid HMM/ANN systems bootstrapped across languages.</p>
+    <p class="links">
+      <a href="./res/pub/thesis.pdf">Thesis</a>
+      <a href="./res/pub/thesis-slides.pdf">Slides</a>
+    </p>
+  </div>
+</article>
+
+<article class="pub" id="can-computers-think">
+  <img src="./res/img/can-computers-think.png" alt="" />
+  <div class="pub-body">
+    <h3>🤖 Can Computers Think?</h3>
+    <time>2021-08-04</time>
+    <p>An essay on whether machine intelligence can ever equal &ndash; or surpass &ndash; human thought.</p>
+    <p class="links">
+      <a href="./can-computers-think.html">Essay</a>
+    </p>
+  </div>
+</article>
+
+<article class="pub" id="security-review">
+  <img src="./res/img/security.png" alt="" />
+  <div class="pub-body">
+    <h3>🔏 Security Review</h3>
+    <time>2020-07-30</time>
+    <p>A condensed review of the key definitions and results from the Security lecture at KIT.</p>
+    <p class="links">
+      <a href="./res/pub/security-review.pdf">Review</a>
+    </p>
+  </div>
+</article>
+
+<article class="pub" id="graph-theory-review">
+  <img src="./res/img/graph-theory.png" alt="" />
+  <div class="pub-body">
+    <h3>🌐 Graph Theory Review</h3>
+    <time>2020-02-20</time>
+    <p>A condensed review of the key definitions and results from the Graph Theory lecture at KIT.</p>
+    <p class="links">
+      <a href="./res/pub/graph-theory-review.pdf">Review</a>
+      <a href="./res/pub/anki-graphtheory.apkg">Anki Deck</a>
+    </p>
+  </div>
+</article>
+
+<article class="pub" id="continuum-hypothesis">
+  <img src="./res/img/infinity.png" alt="" />
+  <div class="pub-body">
+    <h3>♾️ Mächtigkeiten, Kardinalzahlen und die Kontinuumshypothese</h3>
+    <time>2019-12-17</time>
+    <p>Summary of set-theoretic definitions and theorems on cardinality, prepared for a blackboard presentation.</p>
+    <p class="links">
+      <a href="./res/pub/proseminar-grundlagen-mathematik.pdf">Summary</a>
+      <a href="./res/pub/proseminar-grundlagen-mathematik-nachtrag.pdf">Followup</a>
+    </p>
+  </div>
+</article>
+
+<article class="pub" id="swarm-networks">
+  <img src="./res/img/cells.png" alt="" />
+  <div class="pub-body">
+    <h3>🧫 Computation and Pattern Formation by Swarm Networks with Brownian Motion</h3>
+    <time>2019-07-22</time>
+    <p>A report condensing several papers on swarm networks with Brownian motion dynamics, as introduced by Isokawa and Peper.</p>
+    <p class="links">
+      <a href="./res/pub/swarm-networks.pdf">Report</a>
+      <a href="./res/pub/swarm-networks-presentation.pdf">Slides</a>
+    </p>
+  </div>
+</article>
+
+</main>
+
+<footer>
+  <a href="mailto:niklas.buehler@tum.de">Email</a>·
+  <a href="https://www.linkedin.com/in/niklas-buehler">LinkedIn</a>
+  <p>&copy; 2026 Niklas Bühler</p>
+</footer>
+
 </div>
 </body>
 </html>
